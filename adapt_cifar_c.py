@@ -48,7 +48,7 @@ def parse_args():
     parser.add_argument('--gpu', type=int, default=0, help='GPU id to use (default: 0)')
     parser.add_argument('--cpu', action='store_true', help='use CPU anyway')
     parser.add_argument('--method', type=str, default='Source', choices=['Source', 'TM-NORM', 'TM-ENT'],
-                        help='method to use (default: TM-NORM)')
+                        help='method to use (default: Source)')
     parser.add_argument('--fold-bn', action='store_true', help='fold MPBNs')
     parser.add_argument('--running-stats', action='store_true', help='use running stats for TM')
     parser.add_argument('--normalize-residual', action='store_true', help='use normalize residual for TM')
@@ -175,8 +175,8 @@ if __name__ == '__main__':
     # Configure logger
     current_time = datetime.now().strftime('%Y%m%d_%H%M%S')
     log_filename = f'{current_time}_{args.model}_{args.time}dt_{args.spiking_neuron}_mpbn{args.mpbn}' \
-                   f'_bs{args.batch_size}_lr{args.lr}_{args.method}_fold_bn{args.fold_bn}' \
-                   f'rs{args.running_stats}_nr{args.normalize_residual}_{args.fold_bn}.log'
+                   f'_bs{args.batch_size}_lr{args.lr}_{args.method}_foldbn{args.fold_bn}' \
+                   f'_rs{args.running_stats}_nr{args.normalize_residual}.log'
     log_filepath = os.path.join(args.log_dir, 'adapt', log_filename)
     logger = get_logger(log_filepath, 'ADAPT')
     logger.info(f"Arguments: {vars(args)}")

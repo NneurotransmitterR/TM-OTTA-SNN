@@ -29,6 +29,7 @@ def seed_all(seed):
     Set random seed for reproducibility
     """
     random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     if torch.cuda.is_available():
@@ -36,4 +37,4 @@ def seed_all(seed):
         torch.cuda.manual_seed_all(seed)
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
-    # os.environ[HONHASHSEED'str(seed)
+

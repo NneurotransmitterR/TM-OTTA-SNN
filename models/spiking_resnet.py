@@ -246,22 +246,23 @@ class SpikingResNet_M_Cifar(SpikingResNet_Cifar):
         return x
 
 
-def _spiking_resnet(arch, block, layers, pretrained, progress, spiking_neuron, **kwargs):
+def _spiking_resnet_cifar(arch, block, layers, pretrained, progress, spiking_neuron, **kwargs):
     model = SpikingResNet_Cifar(block, layers, spiking_neuron=spiking_neuron, **kwargs)
     return model
 
 
 def spiking_resnet19_cifar(pretrained=False, progress=True, spiking_neuron: callable=None, **kwargs):
-    return _spiking_resnet('resnet19', BasicBlock, [3, 3, 2], pretrained, progress, spiking_neuron, **kwargs)
+    return _spiking_resnet_cifar('resnet19', BasicBlock, [3, 3, 2], pretrained, progress, spiking_neuron, **kwargs)
 
 
 def spiking_resnet20_cifar(pretrained=False, progress=True, spiking_neuron: callable=None, **kwargs):
-    return _spiking_resnet('resnet20', BasicBlock, [3, 3, 3], pretrained, progress, spiking_neuron, **kwargs)
+    return _spiking_resnet_cifar('resnet20', BasicBlock, [3, 3, 3], pretrained, progress, spiking_neuron, **kwargs)
 
 
 def _spiking_resnet_m(arch, block, layers, pretrained, progress, spiking_neuron, **kwargs):
     model = SpikingResNet_M_Cifar(block, layers, spiking_neuron=spiking_neuron, **kwargs)
     return model
+
 
 def spiking_resnet19_m_cifar(pretrained=False, progress=True, spiking_neuron: callable=None, **kwargs):
     return _spiking_resnet_m('resnet19_m', BasicBlock, [3, 3, 2], pretrained, progress, spiking_neuron, **kwargs)

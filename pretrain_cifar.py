@@ -140,8 +140,8 @@ if __name__ == '__main__':
     
     # Data preprocessing and augmentation
     transform_train = transforms.Compose([
-        transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
+        transforms.RandomCrop(32, padding=4),
         transforms.ToTensor(),
         Cutout(n_holes=1, length=16),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
@@ -200,7 +200,7 @@ if __name__ == '__main__':
     if args.test_only:
         logger.info("Starting testing...")
         logger.info(f"Recorded acc in checkpoint: {best_acc:.2f}%")
-        test_loss, test_acc = test(model, device, testloader, criterion)
+        test_loss, test_acc = test(model, device, testloader, criterion, logger)
         logger.info(f"Test accuracy: {test_acc:.2f}%")
         exit(0)
     

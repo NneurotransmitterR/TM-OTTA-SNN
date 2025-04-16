@@ -18,7 +18,7 @@ def fold_vbn(model: nn.Module, normalize_residual: bool = False, running_stats: 
                     print(f"Folding {name}.{name_c}...")
                     setattr(m, name_c, nn.Identity())
                     setattr(m, 'fold_bn', True)
-                    if learnable_vth:
+                    if learnable_vth:  # only for learning vth with entropy loss in the Discussion section
                         with torch.no_grad():
                             m.vth.copy_((m.v_threshold - child.bias) * torch.sqrt(child.running_var + child.eps) / child.weight + child.running_mean)
                             print("The folded Vth is initialized.")
