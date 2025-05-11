@@ -55,7 +55,7 @@ If you find our work useful, please consider citing our paper:
 ```bibtex
 @misc{zhao2025thresholdmodulationonlinetesttime,
       title={Threshold Modulation for Online Test-Time Adaptation of Spiking Neural Networks}, 
-      author={Kejie Zhao and Wenjia Hua and Aiersi Tuerhong and Luziwei Leng and Yuxin Ma and Qinghua Guo},
+      author={Kejie Zhao and Wenjia Hua and Aiersi Tuerhong and Luziwei Leng and Yuxin Ma and Qinghai Guo},
       year={2025},
       eprint={2505.05375},
       archivePrefix={arXiv},
