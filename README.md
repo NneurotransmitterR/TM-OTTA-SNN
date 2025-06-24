@@ -30,15 +30,16 @@ You can install the dependencies as follows:
 # create a new conda environment
 conda create -n tm-otta-snn python=3.11.5
 conda activate tm-otta-snn
+# clone this repository
+git clone https://github.com/NneurotransmitterR/TM-OTTA-SNN.git && cd TM-OTTA-SNN
 # install PyTorch
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
 # install other dependencies
 pip install -r requirements.txt
 # install SpikingJelly
 git clone https://github.com/fangwei123456/spikingjelly.git && cd spikingjelly
-python setup.py install
-# clone this repository
-git clone https://github.com/NneurotransmitterR/TM-OTTA-SNN.git && cd TM-OTTA-SNN
+pip install .
+
 ```
 
 ## Dataset
