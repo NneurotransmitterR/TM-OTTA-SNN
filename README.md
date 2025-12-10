@@ -54,13 +54,15 @@ bash ./example_cifar.sh
 ## Citation
 If you find our work useful, please consider citing our paper:
 ```bibtex
-@misc{zhao2025thresholdmodulationonlinetesttime,
-      title={Threshold Modulation for Online Test-Time Adaptation of Spiking Neural Networks}, 
-      author={Kejie Zhao and Wenjia Hua and Aiersi Tuerhong and Luziwei Leng and Yuxin Ma and Qinghai Guo},
-      year={2025},
-      eprint={2505.05375},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.05375}, 
+@INPROCEEDINGS{11228835,
+  author={Zhao, Kejie and Hua, Wenjia and Tuerhong, Aiersi and Leng, Luziwei and Ma, Yuxin and Guo, Qinghai},
+  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)}, 
+  title={Threshold Modulation for Online Test-Time Adaptation of Spiking Neural Networks}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-10},
+  keywords={Adaptation models;Neuromorphics;Firing;Computational modeling;Spiking neural networks;Benchmark testing;Hardware;Robustness;Data models;Computational efficiency;spiking neural networks;online test-time adaptation;neuromorphic chips;brain-inspired computing},
+  doi={10.1109/IJCNN64981.2025.11228835},
 }
 ```
